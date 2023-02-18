@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "version": "0.6.7"
+  },
+  "savePath": "C:\\Pet things\\pixijs-typescript-template\\pixijs-typescript-template\\assets",
+  "images": [
+    {
+      "name": "button.png",
+      "path": "C:/Pet things/pixijs-typescript-template/pixijs-typescript-template/assets/sprites/button.png",
+      "folder": ""
+    },
+    {
+      "name": "card.png",
+      "path": "C:/Pet things/pixijs-typescript-template/pixijs-typescript-template/assets/sprites/card.png",
+      "folder": ""
+    },
+    {
+      "name": "emoji1.png",
+      "path": "C:/Pet things/pixijs-typescript-template/pixijs-typescript-template/assets/sprites/emoji1.png",
+      "folder": ""
+    },
+    {
+      "name": "emoji2.png",
+      "path": "C:/Pet things/pixijs-typescript-template/pixijs-typescript-template/assets/sprites/emoji2.png",
+      "folder": ""
+    },
+    {
+      "name": "emoji3.png",
+      "path": "C:/Pet things/pixijs-typescript-template/pixijs-typescript-template/assets/sprites/emoji3.png",
+      "folder": ""
+    },
+    {
+      "name": "emoji4.png",
+      "path": "C:/Pet things/pixijs-typescript-template/pixijs-typescript-template/assets/sprites/emoji4.png",
+      "folder": ""
+    },
+    {
+      "name": "emoji5.png",
+      "path": "C:/Pet things/pixijs-typescript-template/pixijs-typescript-template/assets/sprites/emoji5.png",
+      "folder": ""
+    },
+    {
+      "name": "emoji6.png",
+      "path": "C:/Pet things/pixijs-typescript-template/pixijs-typescript-template/assets/sprites/emoji6.png",
+      "folder": ""
+    }
+  ],
+  "folders": [],
+  "packOptions": {
+    "textureName": "assets",
+    "textureFormat": "png",
+    "removeFileExtension": false,
+    "prependFolderName": true,
+    "base64Export": false,
+    "tinify": false,
+    "tinifyKey": "",
+    "scale": 1,
+    "filter": "none",
+    "exporter": "pixi.js",
+    "fileName": "pack-result",
+    "savePath": "C:\\Pet things\\pixijs-typescript-template\\pixijs-typescript-template\\assets",
+    "width": 2048,
+    "height": 2048,
+    "fixedSize": false,
+    "powerOfTwo": false,
+    "padding": 0,
+    "extrude": 0,
+    "allowRotation": true,
+    "allowTrim": true,
+    "trimMode": "trim",
+    "alphaThreshold": "0",
+    "detectIdentical": true,
+    "packer": "MaxRectsBin",
+    "packerMethod": "BestShortSideFit"
+  }
+}

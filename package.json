@@ -1,0 +1,28 @@
+{
+    "name": "pixijs-typescript-test-task",
+    "version": "1.0",
+    "description": "Pixi.js + Typescrirt test task.",
+    "scripts": {
+        "dev": "webpack-dev-server -d",
+        "build": "webpack"
+    },
+    "author": "Bohdan Posikira",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^17.0.41",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "5.1.2",
+        "html-webpack-plugin": "4.0.4",
+        "prettier": "2.0.4",
+        "ts-loader": "6.2.2",
+        "typescript": "3.8.3",
+        "webpack": "4.42.1",
+        "webpack-cli": "3.3.12",
+        "webpack-dev-server": "^3.11.3"
+    },
+    "dependencies": {
+        "@tweenjs/tween.js": "^18.6.4",
+        "fps-m": "^1.1.3",
+        "pixi.js": "5.2.1"
+    }
+}
