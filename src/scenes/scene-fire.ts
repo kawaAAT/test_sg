@@ -25,8 +25,6 @@ export default class SceneFire extends BaseScene {
         shaderContainer.filters = [filter];
 
         this.app.ticker.add((delta) => {
-            console.log(filter.uniforms.time);
-
             if (this.visible)
                 filter.uniforms.time += this.app.ticker.deltaMS / 1000;
         });
