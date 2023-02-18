@@ -1,4 +1,5 @@
 export default `
+  precision mediump float;
   #define MAGIC_NUMBER 43758.5453123
 
   varying vec2 vTextureCoord;

@@ -12,7 +12,7 @@ export default class SceneFire extends BaseScene {
     }
 
     private initFire(): void {
-        const shaderContainer= new Graphics();
+        const shaderContainer = new Graphics();
         shaderContainer.beginFill(0x000000, 1);
         shaderContainer.drawRect(-150, -150, 300, 300);
         shaderContainer.endFill();
@@ -24,8 +24,10 @@ export default class SceneFire extends BaseScene {
 
         shaderContainer.filters = [filter];
 
+        const fireSpeed = 4;
         this.app.ticker.add((delta) => {
-            filter.uniforms.time += 0.1 * delta;
+            if (this.visible)
+                filter.uniforms.time += fireSpeed * this.app.ticker.deltaMS / 1000;
         });
     }
 }
