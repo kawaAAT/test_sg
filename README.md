@@ -1,7 +1,7 @@
 # Pixi.js + TypeScript test task
 
 ## Demo
-kawaAAT.github.io
+Demo is on [GitHub Pages](https://kawaaat.github.io/kawaAAT/).
 
 ## Setup
 ```bash
