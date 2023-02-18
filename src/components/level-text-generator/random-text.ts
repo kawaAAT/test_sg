@@ -24,7 +24,7 @@ export default class RandomText extends Text {
     this.visible = false;
   }
 
-  randomize() {
+  public randomize(): void {
     this.text = this.textSamples[Math.floor(Math.random() * this.textSamples.length)];
     this.style.fontSize = Math.floor(30 + Math.random() * 30);
     this.style.fill = Utils.getRandomHex();

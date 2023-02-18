@@ -38,7 +38,7 @@ export default class ScenesManager {
         this.initFireScene();
     }
 
-    private initLevelSelectScene() {
+    private initLevelSelectScene(): void {
         this.sceneLevelSelect = new SceneLevelSelect(this.app);
         this.app.stage.addChild(this.sceneLevelSelect);
 
@@ -87,7 +87,7 @@ export default class ScenesManager {
         this.currentScene = newScene;
     }
 
-    private resize() {
+    private resize(): void {
         this.backButton.x = this.app.view.width / 2 - 110;
         this.backButton.y = -this.app.view.height / 2 + 30;
     }

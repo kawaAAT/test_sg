@@ -17,14 +17,14 @@ export default class CardsStack extends Container {
     this.interactiveChildren = false;
   }
 
-  public addCard(card: Card) {
+  public addCard(card: Card): void {
     this.addChild(card);
     this.stack.push(card);
 
     card.y = this.stack.length * CARDS_OFFSET;
   }
 
-  public moveCardToStack(stack: CardsStack) {
+  public moveCardToStack(stack: CardsStack): void {
     const card = this.stack.pop();
 
     // we save local position of the card relative to the new stack

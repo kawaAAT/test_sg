@@ -23,20 +23,20 @@ const main = async () => {
     new ScenesManager(app);
 };
 
-const initFpsMeter = () => {
+const initFpsMeter = (): void => {
     const fps = new FPSMeter({ ui: true });
     fps.start();
     fps.element.style.top = '0px';
     fps.element.style.bottom = '';
 }
 
-const animate = (time: number) => {
+const animate = (time: number): void => {
     requestAnimationFrame(animate);
     TWEEN.update(time);
 }
-requestAnimationFrame(animate)
+requestAnimationFrame(animate);
 
-const resize = (app: Application) => {
+const resize = (app: Application): void => {
     app.renderer.resize(window.innerWidth, window.innerHeight);
     app.stage.position.x = app.view.width / 2;
     app.stage.position.y = app.view.height / 2;

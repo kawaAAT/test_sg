@@ -18,7 +18,7 @@ export default class RandomSprite extends Sprite {
     this.scale.set(0.5);
   }
 
-  randomize() {
+  public randomize(): void {
     const textureName = this.spritesNames[Math.floor(Math.random() * this.spritesNames.length)];
     this.texture = TexturesCache.get(textureName);
 
