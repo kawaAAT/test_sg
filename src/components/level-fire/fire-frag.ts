@@ -1,6 +1,6 @@
 export default `
-  precision mediump float;
-  #define MAGIC_NUMBER 43758.5453123
+  precision highp float;
+  #define MAGIC_NUMBER 43758.
 
   varying vec2 vTextureCoord;
   uniform float time;
@@ -78,8 +78,10 @@ export default `
     uv *= 2.;
     uv += vec2(0.7, 0.7 );
 
+    float moddedTime = mod(time, 10.) * 4.;
+
     float octaves1 = 3.0;
-    float noiseAmount1 = noise(vec2(octaves1 * uv.x, octaves1 * uv.y + time));
+    float noiseAmount1 = noise(vec2(octaves1 * uv.x, octaves1 * uv.y + moddedTime));
     float yGradient1 = clamp(0., 0.6 - uv.y, 1.) * 0.3;
     vec2 sdfNoise1 = vec2(noiseAmount1 * .0, noiseAmount1 * 4.9 * yGradient1);
     vec2 p1 = (uv - vec2(-0.15, 0.5)) + sdfNoise1;
@@ -87,7 +89,7 @@ export default `
     vec4 color1 = vec4(step(sdfCircle(p1, 0.4), .0)) * vec4(1., .2, 0., 1.);
     
     float octaves2 = 6.0;
-    float noiseAmount2 = noise(vec2(octaves2 * uv.x, octaves2 * uv.y + time));
+    float noiseAmount2 = noise(vec2(octaves2 * uv.x, octaves2 * uv.y + moddedTime));
     float yGradient2 = clamp(0., 0.5 - uv.y, 1.0) * 0.5;
     vec2 sdfNoise2 = vec2(noiseAmount2 * .0, noiseAmount2 * 2.8 * yGradient2);
     vec2 p2 = (uv - vec2(-0.15, 0.55)) + sdfNoise2;
@@ -95,7 +97,7 @@ export default `
     vec4 color2 = vec4(step(sdfCircle(p2, 0.2), 0.)) * vec4(1., .5, 0., 1.);
     
     float octaves3 = 9.0;
-    float noiseAmount3 = noise(vec2(octaves3 * uv.x, octaves3 * uv.y + time));
+    float noiseAmount3 = noise(vec2(octaves3 * uv.x, octaves3 * uv.y + moddedTime));
     float yGradient3 = clamp(0., 0.45 - uv.y, 1.0) * 0.45;
     vec2 sdfNoise3 = vec2(noiseAmount3 * .0, noiseAmount3 * 2.7 * yGradient3);
     vec2 p3 = (uv - vec2(-0.15, 0.5)) + sdfNoise3;

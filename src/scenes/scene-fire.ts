@@ -24,10 +24,11 @@ export default class SceneFire extends BaseScene {
 
         shaderContainer.filters = [filter];
 
-        const fireSpeed = 4;
         this.app.ticker.add((delta) => {
+            console.log(filter.uniforms.time);
+
             if (this.visible)
-                filter.uniforms.time += fireSpeed * this.app.ticker.deltaMS / 1000;
+                filter.uniforms.time += this.app.ticker.deltaMS / 1000;
         });
     }
 }
